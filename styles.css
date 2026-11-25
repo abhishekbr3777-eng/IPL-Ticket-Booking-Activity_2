@@ -1,0 +1,280 @@
+/* CSS Variables */
+:root {
+    --primary: #071952;
+    --secondary: #088395;
+    --accent: #f9a826;
+    --background: #f4f6f9;
+    --text: #222222;
+    --white: #ffffff;
+}
+
+/* Universal Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--primary);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(
+        120deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+button, .btn {
+    background-color: var(--accent);
+    color: var(--primary);
+    border: none;
+    padding: 12px 22px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Sections */
+section {
+    padding: 45px 6%;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* About Section */
+.about {
+    background-color: var(--white);
+}
+
+.about h3 {
+    color: var(--secondary);
+    margin-top: 20px;
+}
+
+.about ul {
+    margin: 10px 30px;
+}
+
+/* Match Schedule Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    margin-top: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 13px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+tr:nth-child(even) {
+    background-color: #eaf3f5;
+}
+
+tr:hover {
+    background-color: #fff0d1;
+}
+
+/* Team Filter */
+.filter {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+/* Booking Section */
+.booking-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.booking-form, .summary {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.booking-form h3, .summary h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Form Elements */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: var(--secondary);
+}
+
+/* Booking Summary */
+.summary p {
+    margin: 15px 0;
+}
+
+.summary h3 {
+    color: var(--secondary);
+}
+
+/* Guidelines Cards */
+.guideline-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--secondary);
+    margin-bottom: 12px;
+}
+
+/* My Bookings */
+#mybookings {
+    background-color: var(--white);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .booking-container {
+        flex-direction: column;
+    }
+
+    .guideline-container {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 7px;
+    }
+
+    section {
+        padding: 30px 4%;
+    }
+}
